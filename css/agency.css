@@ -763,6 +763,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   margin: 0 !important;
 }
 
+.m15{
+  margin: 15px !important;
+}
+
 .float-l{
   float:left;
 }
@@ -770,6 +774,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .card{
  background: #fff;
  border:0px;
+ border-radius:0px !important;
 }
 
 .card-service{
@@ -864,7 +869,7 @@ input[type="text"]:focus{
 
 /* The container */
 .checkCustom {
-  display: block;
+  display: inline-block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
