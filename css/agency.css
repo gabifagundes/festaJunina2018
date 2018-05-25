@@ -3,6 +3,7 @@
  * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
+ @import url('https://fonts.googleapis.com/css?family=Bangers|Boogaloo');
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -118,25 +119,24 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-brand {
-  color: #c1da35;
+  color: #8cc50a;
   font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive;
 }
 
 #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #fec503;
+  color: #c9583a;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  font-size: 90%;
-  font-weight: 400;
+  font-size: 20px;
   padding: 0.75em 0;
   letter-spacing: 1px;
-  color: white;
-  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #8cc50a;
+  font-family: 'Boogaloo', cursive;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #c1da35;
+  color: #c9583a;
 }
 
 @media (min-width: 992px) {
@@ -148,6 +148,7 @@ img::-moz-selection {
     transition: padding-top 0.3s, padding-bottom 0.3s;
     border: none;
     background-color: transparent;
+    top: 20px;
   }
   #mainNav .navbar-brand {
     font-size: 1.75em;
@@ -162,6 +163,7 @@ img::-moz-selection {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
+    top:0px;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -333,9 +335,9 @@ header.masthead .intro-text .intro-heading {
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#portfolio * {
-  z-index: 2;
-}
+/* #portfolio * {
+  z-index: 1;
+} */
 
 @media (min-width: 767px) {
   #portfolio .portfolio-item {
@@ -741,6 +743,186 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-size: contain;
 }
 
+.width-100{
+  width:100%;
+}
+
+.height-100{
+  height:100%;
+}
+
 .pb-0{
   padding-bottom:0 !important;
+}
+
+.p0{
+  padding: 0 !important;
+}
+
+.m0{
+  margin: 0 !important;
+}
+
+.float-l{
+  float:left;
+}
+
+.card{
+ background: #fff;
+ border:0px;
+}
+
+.card-service{
+  background-image: url(../img/atracoes/01-full.jpg);
+  background-position: center;
+  background-size: cover; 
+}
+
+#carouselAtr{
+  background-color: #fff;
+}
+
+#carouselAtr i{
+  color: #8fff00;
+    font-size: 40px;
+}
+
+
+@media (min-width: 991px){
+
+  .align-card{
+    transform: translate(0,100%);
+  }
+  .img-height{
+    height: 700px;
+  }
+}
+
+@media (max-width: 990px){
+
+  .img-height{
+    height: 300px;
+  }
+
+  #carouselAtr i{
+    top: 130px;
+    position: absolute;
+  }
+
+}
+
+.button.special {
+  width: 100%;
+  display: block;
+  letter-spacing: 0;
+  white-space: normal;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 0.8em;
+  background-color: white;
+  cursor: pointer;
+  padding:10px;
+  text-align: center;
+}
+
+.button.special.color2 {
+  color: #e37b7c !important;
+}
+
+.button.special.color2:hover {
+  background-color: #e37b7c !important;
+  color: #fff!important;
+}
+
+.box_form .confirmar button.special.color2 {
+  width: 100%;
+  background-color: #E37B7C;
+  color: #fff !important;
+}
+
+input[type=text]{   
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background: #c8e6e1;
+  border: solid 2px rgba(255, 255, 255, 0.25);
+  border-radius: 0.25rem;
+  color: inherit;
+  display: block;
+  outline: 0;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+}
+
+input[type="text"]:focus{
+  border-color: #3b8188;
+}
+
+
+/* The container */
+.checkCustom {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* font-size: 22px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+}
+
+/* Hide the browser's default checkbox */
+.checkCustom input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkCustom:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkCustom input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkCustom input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkCustom .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
