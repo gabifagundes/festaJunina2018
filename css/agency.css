@@ -4,9 +4,12 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
  @import url('https://fonts.googleapis.com/css?family=Bangers|Boogaloo');
+ @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+ @import url('https://fonts.googleapis.com/css?family=Covered+By+Your+Grace');
+ @import url('https://fonts.googleapis.com/css?family=Special+Elite');
 body {
   overflow-x: hidden;
-  font-family: 'Roboto Slab', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 p {
@@ -743,6 +746,21 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   background-size: contain;
 }
 
+.bg-grey{  
+  background-color: #ecebe7!important;  
+  background-image: url(../img/bg_pattern.png);
+  background-blend-mode: overlay;
+  background-size: contain;
+}
+
+.dp-none{
+  display:none;
+}
+
+.dp-block{
+  display: block !important;
+}
+
 .width-100{
   width:100%;
 }
@@ -759,12 +777,24 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   padding: 0 !important;
 }
 
+.p30{
+  padding: 30px !important;
+}
+
 .m0{
   margin: 0 !important;
 }
 
+.mb10{
+  margin-bottom: 10px !important;
+}
+
 .m15{
   margin: 15px !important;
+}
+
+.mb20{
+  margin-bottom: 20px !important;
 }
 
 .float-l{
@@ -774,7 +804,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .card{
  background: #fff;
  border:0px;
- border-radius:0px !important;
+ border-radius:0px;
 }
 
 .card-service{
@@ -817,26 +847,31 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .button.special {
-  width: 100%;
-  display: block;
-  letter-spacing: 0;
-  white-space: normal;
-  text-transform: capitalize;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  font-size: 0.8em;
-  background-color: white;
-  cursor: pointer;
-  padding:10px;
-  text-align: center;
+  -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: #d2f779;
+    /* border: solid 2px rgba(255, 255, 255, 0.25); */
+    border-radius: 0.25rem;
+    color: inherit;
+    display: block;
+    outline: 0;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease 0s;
 }
 
 .button.special.color2 {
-  color: #e37b7c !important;
+  color: #6e9c30 !important;
+  font-weight: 500;
 }
 
 .button.special.color2:hover {
-  background-color: #e37b7c !important;
+  background-color: #84b93f !important;
   color: #fff!important;
 }
 
@@ -848,10 +883,33 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 input[type=text]{   
   -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background: #edf2f500;
+    border-bottom: 2px solid #ffffff !important;
+    color: inherit;
+    display: block;
+    outline: 0;
+    text-decoration: none;
+    width: 100%;
+    border: 0;
+    font-size: 2em;
+    color: #Fff;
+    font-family: 'Covered By Your Grace', cursive;
+    text-transform: uppercase;
+}
+
+::placeholder{
+  color:#fff;
+}
+
+.button.btconfirmar{
+  -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  background: #c8e6e1;
+  background: #90c747;
   border: solid 2px rgba(255, 255, 255, 0.25);
   border-radius: 0.25rem;
   color: inherit;
@@ -860,10 +918,13 @@ input[type=text]{
   padding: 10px;
   text-decoration: none;
   width: 100%;
+  cursor: pointer;
+  font-weight: 500;
 }
 
-input[type="text"]:focus{
-  border-color: #3b8188;
+input[type="text"]:focus {
+  border-bottom: 2px solid #ffffff !important;
+  border: 0 0 0 2px !important;
 }
 
 
@@ -871,15 +932,18 @@ input[type="text"]:focus{
 .checkCustom {
   display: inline-block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 25px;
+  margin-bottom: 10px;
   cursor: pointer;
-  /* font-size: 22px; */
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   text-align: left;
+  font-family: 'Quicksand', cursive;
+  color: #074b6b;
+  color: #fff;
+  margin-right: 10px;
 }
 
 /* Hide the browser's default checkbox */
@@ -894,9 +958,10 @@ input[type="text"]:focus{
   position: absolute;
   top: 4px;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 15px;
+  width: 15px;
   background-color: #eee;
+  border-radius: 2px;
 }
 
 .checkCustom:hover input ~ .checkmark {
@@ -904,7 +969,7 @@ input[type="text"]:focus{
 }
 
 .checkCustom input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #5b6063;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -921,8 +986,8 @@ input[type="text"]:focus{
 
 /* Style the checkmark/indicator */
 .checkCustom .checkmark:after {
-  left: 9px;
-  top: 5px;
+  left: 6px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
@@ -930,4 +995,42 @@ input[type="text"]:focus{
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* .form-invite label{
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 24px;
+  color: #053348;
+} */
+
+.invite-left{
+  border-radius: 20px 0 0 20px;
+  border-right: 4px dotted #fff;
+  background-color: #a7da64;
+}
+
+.invite-right{
+  border-radius: 0 20px 20px 0;
+}
+
+.box_acompanhante{
+  background: #bdec7e;
+  font-size: 12px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.close_acomp{
+  position: absolute;
+  right: 42px;
+  font-size: 16px;
+  color: #5b6063;
+}
+
+.write-font{
+  font-family: 'Covered By Your Grace', cursive;
+}
+
+.exercit-font{
+  font-family: 'Special Elite', cursive;
 }

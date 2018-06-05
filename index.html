@@ -194,7 +194,7 @@
             </div>
           </div>      
     </section>
-    <section id="invite" class="bg-blueLight">
+    <section id="invite" class="bg-grey">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -202,53 +202,67 @@
             <h3 class="section-subheading text-muted">Para garantir sua presença faça a confirmação em nosso formulário, caso leve mais alguém com você, informe também
               o nome do acompanhante e se este é maior de 7 anos. </h3>
           </div>    
-          <form id="my-awesome-form" action="https://api.formbucket.com/f/buk_TtOmdQVNwE3uoI8cQFAtxk0E" class="col-12" method="post"
+          <form id="my-awesome-form" action="https://api.formbucket.com/f/buk_TtOmdQVNwE3uoI8cQFAtxk0E" class="col-12 form-invite" method="post"
             target="_blank">
             <div class="row">
-              <div class="col-6 box_form form_func mt-20 card">
+              <div class="col-6 box_form form_func mt-20 card invite-left p30">
                 <div class="span-2 not-yellow">
                   <div class="field quarter">
-                    <label for="demo-name">Seu nome:</label>
-                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Funcionário Everis" required/>
+                    <!-- <label for="demo-name">Seu nome:</label> -->
+                    <input type="text" class="mb20" name="demo-name" id="demo-name" value="" placeholder="Nome do Funcionário" required/>
                   </div>
-                  <div class="field third mt-20">
-                    <input type="checkbox" id="concurso-func" name="concurso-func" class="color2" />
-                    <label for="concurso-func">Vou participar do concurso de Melhor Traje</label>
+
+                  <label class=" checkCustom">
+                    <label class="lb-input" >Vou participar do concurso de Melhor Traje</label>
+                    <input type="checkbox" id="concurso-func" name="concurso-func" class="color2"/>
+                    <span for="concurso-func" class="checkmark"></span>
+                  </label>
+                  <div class="">
+                    <!-- <label for="demo-name" class="lb-input">Vai levar acompanhante?</label>  -->
+                    <label class="checkCustom">
+                        <label class="lb-input" for="sim_acomp" >Vou levar acompanhante</label>
+                        <input type="radio" id="sim_acomp" name="lev_acomp" class="color2" value="yes"/>
+                        <span class="checkmark"></span>
+                    </label> 
+                    <label class="checkCustom">
+                        <label class="lb-input" for="no_acomp" >Não Vou levar acompanhante</label>
+                        <input type="radio" id="no_acomp" name="lev_acomp" class="color2" value="no" />
+                        <span class="checkmark"></span>
+                    </label> 
+                </div>
+                  <div class="checkCustom bt-plusacomp dp-none col-12 p0">
+                    <a class="mais_acomp button special color2">Vou levar mais acompanhantes</a>
                   </div>
-                  <div class="field third mt-20">
-                    <label for="demo-name">Vai levar acompanhante?</label>
-                    <input type="radio" id="sim_acomp" name="lev_acomp" class="color2" value="yes" />
-                    <label for="sim_acomp">Sim</label>
-                    <input type="radio" id="no_acomp" name="lev_acomp" class="color2" value="no" />
-                    <label for="no_acomp">Não</label>
-                  </div>
-                  <div class="field third mt-20 bt-plusacomp dp-none">
-                    <a class="mais_acomp button special color2 icon fa-plus-circle">Vou levar mais acompanhantes</a>
-                  </div>
-                  <div class="field third mt-20 confirmar dp-none">
-                    <button type="submit" class="button special color2 icon fa-thumbs-o-up btconfirmar">Confirmar Presença</button>
+                  <div class="checkCustom confirmar dp-none col-12 p0">
+                    <button type="submit" class="button btconfirmar">Confirmar Presença</button>
                   </div>
                 </div>
               </div>
-              <div class="col-6 box_form form_acompanhantes card dp-none">
+              <div class="col-6 box_form form_acompanhantes card p30 invite-right dp-none">
                 <div class="span-1-6 box_acompanhante pr-10">
                   <!-- <a class="del" href="javascript:void(0)" onclick="removeAcomp($(this).parent())">x</a>-->
-                  <a class="del" href="javascript:void(0)" onclick="removeAcomp($(this).parent())">
+                  <a class="del close_acomp" href="javascript:void(0)" onclick="removeAcomp($(this).parent())">
                     <i class="fa fa-times" aria-hidden="true"></i>
                   </a>
-                  <div class="field quarter">
-                    <label for="demo-name" class="nome_acomp">Nome do Acompanhante:</label>
-      
-                    <input type="text" name="demo-acomp" id="demo-name" value="" placeholder="Quem você vai levar..." />
-                  </div>
-                  <div class="field third span-1-75 mt-20">
-                    <input type="checkbox" id="menor-7" name="menor" class="color2 op_menor" value="menorsim" />
-                    <label for="menor-7">Menor de 7 anos</label>
-                  </div>
-                  <div class="field third span-1-75 mt-20 concurso_traje dp-none">
-                    <input type="checkbox" id="concurso-acomp" name="concurso-acomp" class="color2" />
-                    <label for="concurso-acomp">Irá participar do concurso de Melhor Traje</label>
-                  </div>
+                  <div class="field quarter col-12">
+                    <input type="text" class="mb10" name="demo-acomp" id="demo-name" value="" placeholder="Nome do seu acompanhante" />
+                    <div class="row">
+                      <div class="container">   
+                        <label class="checkCustom ">
+                          <label for="menor-7">Menor de 7 anos</label>
+                          <input type="checkbox" id="menor-7" name="menor" class="color2 op_menor" value="menorsim" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="checkCustom mt-20 concurso_traje dp-none">
+                          <input type="checkbox" id="concurso-acomp" name="concurso-acomp" class="color2" />
+                          <label for="concurso-acomp">Irá participar do concurso de Melhor Traje</label>
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    </div>
+                  
+                  
                 </div>
               </div>
             </div>
