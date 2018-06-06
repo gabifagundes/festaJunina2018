@@ -1110,3 +1110,29 @@ input[type="text"]:focus {
     right: 0;
     padding: 20px;
 }
+
+.img-carousel{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel-kids{
+  background-image: url(../img/atracoes/kids.jpg);
+}
+
+.carousel-concurso{
+  background-image: url(../img/atracoes/concurso.jpg);
+}
+
+.carousel-comidas{
+  background-image: url(../img/atracoes/comidas.jpg);
+}
+
+.carousel-quadrilha{
+  background-image: url(../img/atracoes/quadrilha.jpg);
+}
+
+.carousel-musica{
+  background-image: url(../img/atracoes/music.jpg);
+}
