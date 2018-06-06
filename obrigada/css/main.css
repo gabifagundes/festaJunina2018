@@ -1,0 +1,30 @@
+body{
+	    /* background-image: url(../images/tileable_wood_texture.png); */
+		background-image: url(../images/pattern.jpg);
+		background-repeat: repeat;
+		background-color: rgb(239, 217, 60);
+		background-blend-mode: color-dodge;
+		background-size: 270px;
+	
+}
+
+/*.img_agradecimento{
+	background-image: url(../images/img_agradecimento.jpg);
+	box-shadow: 2 2 #000;
+	height:700px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 0%;
+	left: 0;
+	transform: translate(0%,15%);
+}*/
+
+img{
+	position: relative;
+	top:0%;
+	left: 50%;
+	transform: translate(-50%,15%);
+	width:700px;
+	box-shadow: 15px 19px 20px 0px rgba(0, 0, 0, 0.14);
+}

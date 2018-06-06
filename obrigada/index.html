@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Ethereal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Arraiá da Everis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="icon" type="image/png" href="../img/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="../img/favicon-16x16.png" sizes="16x16" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+		<div class="img_agradecimento"></div>
+		<img src="images/Convite-2018.jpg"/>
+			
+
+		<!-- Scripts -->
+			<script>
+				
+				function removeAcomp(t) {
+					if(confirm("Deseja remover este acompanhante?")){
+					 	console.log(t);
+					 	$(t).remove();
+					}
+				}
+				
+				$(document).ready(function(){
+							
+					
+					var ii = 1;
+					$(".mais_acomp" ).click(function() {      
+					  $('.box_acompanhante').first().clone().prependTo('.form_acompanhantes');                                                                
+					  $('.box_acompanhante').first().next().appendTo('.form_acompanhantes');
+
+					  $(".box_acompanhante").last().find('input').first().val('');
+
+					  n1 = $(".box_acompanhante").last().find('.third input').first().attr('name');
+					  $(".box_acompanhante").last().find('.third input').first().attr('name',n1+'-'+ii);
+					  n2 = $(".box_acompanhante").last().find('.third input').last().attr('name');
+					  $(".box_acompanhante").last().find('.third input').last().attr('name',n2+'-'+ii);
+						
+					
+
+					  d1 = $(".box_acompanhante").last().find('.third input').first().attr('id');
+					  $(".box_acompanhante").last().find('.third input').first().attr('id',d1+'-'+ii);
+					  d2 = $(".box_acompanhante").last().find('.third input').last().attr('id');
+					  $(".box_acompanhante").last().find('.third input').last().attr('id',d2+'-'+ii);
+
+					  f1 = $(".box_acompanhante").last().find('.third label').first().attr('for');
+					  $(".box_acompanhante").last().find('.third label').first().attr('for',f1+'-'+ii);
+					  f2 = $(".box_acompanhante").last().find('.third label').last().attr('for');
+					  $(".box_acompanhante").last().find('.third label').last().attr('for',f2+'-'+ii);
+					  ii++;
+				 	 });
+
+					  $(".op_menor").click(function () {
+						  if( $(".op_menor").is(':checked') ){
+						  		$('.concurso_traje').show();
+						  }else {
+							$('.concurso_traje').hide();
+						  }
+
+					  });
+					
+
+					$('input:radio[name="lev_acomp"]').change(function(){						
+						if($(this).val() == 'yes'){
+							$(".form_func").addClass("mr-50");
+							$('.bt-plusacomp').show();
+							$('.form_acompanhantes').show();
+							$('.confirmar').show();
+						}else{
+							$('form_func').removeClass("mr-50");
+							$('.bt-plusacomp').hide();
+							$('.form_acompanhantes').hide();
+							$('.confirmar').show();
+						}
+					});
+				});
+			</script>
+
+	</body>
+</html>
