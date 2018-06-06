@@ -48,13 +48,17 @@ section h2.section-heading {
   margin-bottom: 15px;
 }
 
+section h2.atracoes-title{
+  font-size: 80px;
+}
+
 section h3.section-subheading {
   font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 700;
   margin-bottom: 75px;
   text-transform: none;
-  font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Quicksand', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #8cc50a!important;
 }
 
 @media (min-width: 768px) {
@@ -240,6 +244,16 @@ header.masthead .intro-text .intro-heading {
   .logoArraial img{
     transform: translate(0%, 50%);
   }
+
+  section h2.atracoes-title {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+
+  section h3.section-subheading {
+    margin-bottom: 25px;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -808,7 +822,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .card-service{
-  background-image: url(../img/atracoes/01-full.jpg);
+  background-image: url(../img/atracoes/nossa-festa.jpg);
+  background-position: center;
+  background-size: cover; 
+}
+
+.card-service-who{
+  background-image: url(../img/atracoes/who.jpg);
   background-position: center;
   background-size: cover; 
 }
@@ -826,7 +846,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 @media (min-width: 991px){
 
   .align-card{
-    transform: translate(0,100%);
+    transform: translate(0,70%);
   }
   .img-height{
     height: 700px;

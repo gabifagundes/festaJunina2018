@@ -82,8 +82,8 @@
               <div class=" align-middle height-100 width-100">
                   <div class="card-body align-card">
                       <h2 class="section-heading text-uppercase">Nossa festa</h2>
-                      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <h3 class="section-subheading text-muted">Junho é a cara da everis Uberlândia!</h3>
+                    <p class="card-text">Anualmente fazemos nossa tradicional festa junina, que reune a maioria de nossos colaboradores de Uberlândia num momento de alegria e descontração. E como este ano não poderia ser diferente, estamos te esperando com muita comida e bebida para essa grande festa!</p>
                   </div>
               </div>
         </div>
@@ -98,28 +98,26 @@
                 <div class="carousel-inner">
                   <div class="carousel-item active">                    
                     <div class="col-12 col-lg-6 p0 img-height float-right">
-                      <img src="img/atracoes/01-full.jpg"/>
+                      <img src="img/atracoes/music.jpg"/>
                     </div>
                     <div class="col-12 col-lg-6 text-center card float-right">
                         <div class=" align-middle height-100 width-100">
                             <div class="card-body align-card">
-                                <h2 class="section-heading text-uppercase">Atração 1</h2>
-                                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h2 class="section-heading text-uppercase atracoes-title">MÚSICA AO VIVO</h2>
+                                <h3 class="section-subheading text-muted">Pra você cantar e pular</h3>
                             </div>
                         </div>
                       </div>
                   </div>
                   <div class="carousel-item">                    
                     <div class="col-12 col-lg-6 p0 img-height float-right">
-                      <img src="img/atracoes/02-full.jpg"/>
+                      <img src="img/atracoes/quadrilha.jpg"/>
                     </div>
                     <div class="col-12 col-lg-6 text-center card float-right">
                         <div class=" align-middle height-100 width-100">
                             <div class="card-body align-card">
-                                <h2 class="section-heading text-uppercase">Atração 2</h2>
-                                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h2 class="section-heading text-uppercase atracoes-title">Quadrilha</h2>
+                                <h3 class="section-subheading text-muted">Nossa tradicional dança de festa junina</h3>
                             </div>
                         </div>
                       </div>
@@ -209,7 +207,7 @@
                 <div class="span-2 not-yellow">
                   <div class="field quarter">
                     <!-- <label for="demo-name">Seu nome:</label> -->
-                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nome do Funcionário" required/>
+                    <input type="text" class="mb20" name="demo-name" id="demo-name" value="" placeholder="Nome do Funcionário" required/>
                   </div>
 
                   <label class=" checkCustom">
@@ -218,14 +216,14 @@
                     <span for="concurso-func" class="checkmark"></span>
                   </label>
                   <div class="">
-                    <label for="demo-name" class="lb-input">Vai levar acompanhante?</label> 
+                    <!-- <label for="demo-name" class="lb-input">Vai levar acompanhante?</label>  -->
                     <label class="checkCustom">
-                        <label class="lb-input" for="sim_acomp" >Sim</label>
+                        <label class="lb-input" for="sim_acomp" >Vou levar acompanhante</label>
                         <input type="radio" id="sim_acomp" name="lev_acomp" class="color2" value="yes"/>
                         <span class="checkmark"></span>
                     </label> 
                     <label class="checkCustom">
-                        <label class="lb-input" for="no_acomp" >Não</label>
+                        <label class="lb-input" for="no_acomp" >Não Vou levar acompanhante</label>
                         <input type="radio" id="no_acomp" name="lev_acomp" class="color2" value="no" />
                         <span class="checkmark"></span>
                     </label> 
@@ -244,19 +242,25 @@
                   <a class="del close_acomp" href="javascript:void(0)" onclick="removeAcomp($(this).parent())">
                     <i class="fa fa-times" aria-hidden="true"></i>
                   </a>
-                  <div class="field quarter col-12">      
-                    <input type="text" name="demo-acomp" id="demo-name" value="" placeholder="Nome do seu acompanhante" />
-                    <label class="checkCustom ">
-                      <label for="menor-7">Menor de 7 anos</label>
-                    <input type="checkbox" id="menor-7" name="menor" class="color2 op_menor" value="menorsim" />                    
-                    <span class="checkmark"></span>
-                  </label>
-                  </div>
+                  <div class="field quarter col-12">
+                    <input type="text" class="mb10" name="demo-acomp" id="demo-name" value="" placeholder="Nome do seu acompanhante" />
+                    <div class="row">
+                      <div class="container">   
+                        <label class="checkCustom ">
+                          <label for="menor-7">Menor de 7 anos</label>
+                          <input type="checkbox" id="menor-7" name="menor" class="color2 op_menor" value="menorsim" />
+                          <span class="checkmark"></span>
+                        </label>
+                        <label class="checkCustom mt-20 concurso_traje dp-none">
+                          <input type="checkbox" id="concurso-acomp" name="concurso-acomp" class="color2" />
+                          <label for="concurso-acomp">Irá participar do concurso de Melhor Traje</label>
+                          <span class="checkmark"></span>
+                        </label>
+                      </div>
+                    </div>
+                    </div>
                   
-                  <div class="field third span-1-75 mt-20 concurso_traje dp-none">
-                    <input type="checkbox" id="concurso-acomp" name="concurso-acomp" class="color2" />
-                    <label for="concurso-acomp">Irá participar do concurso de Melhor Traje</label>
-                  </div>
+                  
                 </div>
               </div>
             </div>
