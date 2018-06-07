@@ -21,9 +21,12 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+    
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/set2.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
 
   </head>
 
@@ -180,7 +183,7 @@
                           <h4 class="text-left"><strong> Colaboradores</strong></h4>
                           <p class="card-text text-left">A entrada para os colaboradores é gratuita, basta confirmar presença em nosso formulário. </p>
                           <h4 class="text-left"><strong> Acompanhantes</strong></h4>
-                          <p class="card-text text-left">Os acompanhantes (esposa(o), namorada(o) e filhos) também são bem vindos! Para eles, os convites estão sendo vendidos por R$30,00. Crianças de 0 a 7 anos não pagam.</p>
+                          <p class="card-text text-left">Os acompanhantes (esposa(o), namorada(o) e filhos) também são bem vindos! Para eles, os convites estão sendo vendidos por R$30,00. Lembrando que cada colaborador pode levar: um acompanhante adulto + crianças (Crianças de 0 a 7 anos não pagam.)</p>
                       </div>
                   </div>
             </div>
@@ -197,37 +200,56 @@
           <form id="my-awesome-form" action="https://api.formbucket.com/f/buk_TtOmdQVNwE3uoI8cQFAtxk0E" class="col-12 form-invite" method="post"
             target="_blank">
             <div class="row">
-              <div class="col-12 col-md-6  col-xs-12 box_form form_func mt-20 card invite-left border-bottom border-right p30">
+              <div class="col-12 col-md-6  col-xs-12 box_form form_func mt-20 card invite-left border-bottom border-right ptrl30">
                 <div class="span-2 not-yellow">
-                  <div class="field quarter">
-                    <!-- <label for="demo-name">Seu nome:</label> -->
-                    <input type="text" class="mb20" name="demo-name" id="demo-name" value="" placeholder="Nome do Funcionário" required/>
-                  </div>
+                  <section class="mb20 p0">
+                      <span class="input input--kohana mb20">
+                          <input class="input__field input__field--kohana" name="funcionario" id="funcionario" type="text" id="input-29" required />
+                          <label class="input__label input__label--kohana" for="input-29">
+                              <i class="fas fa-user-tie icon icon--kohana"></i>
+                            <span class="input__label-content input__label-content--kohana">Nome do Funcionário</span>
+                          </label>
+                        </span>
+                        <span class="input input--kohana acomp mb20">
+                            <input class="input__field input__field--kohana  acompanhante" name="acompanhante" id="funcionario" type="text" id="input-29"/>
+                            <label class="input__label input__label--kohana" for="input-29">
+                                <i class="fas fa-user-friends icon icon--kohana"></i>
+                              <span class="input__label-content input__label-content--kohana acomp">Quero levar um acompanhante</span>
+                            </label>
+                          </span>
 
-                  <label class=" checkCustom">
-                    <label class="lb-input" >Vou participar do concurso de Melhor Traje</label>
-                    <input type="checkbox" id="concurso-func" name="concurso-func" class="color2"/>
-                    <span for="concurso-func" class="checkmark"></span>
-                  </label>
-                  <div class="">
-                    <!-- <label for="demo-name" class="lb-input">Vai levar acompanhante?</label>  -->
-                    <label class="checkCustom">
-                        <label class="lb-input" for="sim_acomp" >Vou levar acompanhante</label>
-                        <input type="radio" id="sim_acomp" name="lev_acomp" class="color2" value="yes"/>
-                        <span class="checkmark"></span>
-                    </label> 
-                    <label class="checkCustom">
-                        <label class="lb-input" for="no_acomp" >Não Vou levar acompanhante</label>
-                        <input type="radio" id="no_acomp" name="lev_acomp" class="color2" value="no" />
-                        <span class="checkmark"></span>
-                    </label> 
-                </div>
-                  <div class="checkCustom bt-plusacomp dp-none col-12 p0">
-                    <a class="mais_acomp button special color2" disabled>Vou levar mais acompanhantes</a>
+                          <label class=" checkCustom text-left col-12">
+                              <label class="lb-input ml15" >Vou participar do concurso de Melhor Traje</label>
+                              <input type="checkbox" id="concurso-func" name="concurso-func" class="color2"/>
+                              <span for="concurso-func" class="checkmark"></span>
+                            </label>
+
+                            <div class="box-kids col-12  p0">
+                                <label class="checkCustom text-left float-l col-12 col-md-5 mr15">
+                                    <label class="lb-input ml15" for="sim_acomp" >Levarei Crianças</label>
+                                    <input type="radio" id="sim_acomp" name="kids" class="color2" value="yes"/>
+                                    <span class="checkmark"></span>
+                                </label> 
+                                <label class="checkCustom text-left float-l col-12 col-md-5">
+                                    <label class="lb-input ml15" for="no_acomp" >Não levarei crianças</label>
+                                    <input type="radio" id="no_acomp" name="kids" class="color2" value="no" />
+                                    <span class="checkmark"></span>
+                                </label> 
+                              </div>
+                  </section>
+
+                  
+                  
+                  <!-- <div class="checkCustom bt-plusacomp dp-none col-12 p0">
+                    <a class="mais_acomp button special color2" disabled>Vou levar mais crianças</a>
                   </div>
                   <div class="checkCustom confirmar dp-none col-12 p0">
                     <button type="submit" class="button btconfirmar">Confirmar Presença</button>
-                  </div>
+                  </div> -->
+                </div>
+                <div class="row"> 
+                  <div class="checkCustom bt-plusacomp dp-none col-6 pr0"><a class="mais_acomp button special color2 col-12 height-bt"> + Crianças</a></div>
+                  <div class="checkCustom confirmar dp-none col-6 pl0"><button type="submit" class="button btconfirmar col-12 height-bt">Confirmar Presença</button></div>
                 </div>
               </div>
               <div class="col-12 col-md-6 box_form form_acompanhantes img-form card p30 invite-right">
@@ -236,25 +258,25 @@
                   <a class="del close_acomp" href="javascript:void(0)" onclick="removeAcomp($(this).parent())">
                     <i class="fa fa-times" aria-hidden="true"></i>
                   </a>
-                  <div class="field quarter col-12">
-                    <input type="text" class="mb10" name="demo-acomp" id="demo-name" value="" placeholder="Nome do seu acompanhante" />
-                    <div class="row">
-                      <div class="container">   
-                        <label class="checkCustom ">
-                          <label for="menor-7">Menor de 7 anos</label>
-                          <input type="checkbox" id="menor-7" name="menor" class="color2 op_menor" value="menorsim" />
-                          <span class="checkmark"></span>
-                        </label>
-                        <label class="checkCustom mt-20 concurso_traje dp-none">
-                          <input type="checkbox" id="concurso-acomp" name="concurso-acomp" class="color2" />
-                          <label for="concurso-acomp">Irá participar do concurso de Melhor Traje</label>
-                          <span class="checkmark"></span>
-                        </label>
-                      </div>
-                    </div>
-                    </div>
-                  
-                  
+                  <section class="mb20 p0">
+                    <span class="input input--kohana width-90 mb20">
+                      <input class="input__field input__field--kohana"  name="nomeChild" id="demo-name" value="" type="text" id="input-29" required />
+                      <label class="input__label input__label--kohana" for="input-29">
+                        <i class="fas fa-child icon icon--kohana"></i>
+                        <span class="input__label-content input__label-content--kohana">Nome da Criança</span>
+                      </label>
+                    </span>
+                      <label class="checkCustom text-left float-l mr15">
+                        <label class="lb-input kids" for="menor-7">Menor de 7 anos</label>
+                        <input type="checkbox" id="menor-7" name="menor" class="color2 op_menor" value="menorsim" />
+                        <span class="checkmark"></span>
+                      </label>
+                      <label class="checkCustom concurso_traje dp-none float-l">
+                        <input type="checkbox" id="concurso-acomp" name="concurso-acomp" class="color2" />
+                        <label class="lb-input  kids" for="concurso-acomp">Irá participar do concurso de Melhor Traje</label>
+                        <span class="checkmark"></span>
+                      </label>
+                  </section> 
                 </div>
               </div>
             </div>
@@ -285,14 +307,49 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
+    <script src="js/classie.js"></script>
 
     <script src="js/jquery.min.js"></script>
 			<script src="js/skel.min.js"></script>
 			<!-- <script src="js/main.js"></script> -->
 			<script>
+
+        (function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
 				
 				function removeAcomp(t) {
-					if(confirm("Deseja remover este acompanhante?")){
+					if(confirm("Deseja cancelar a ida desta criança? Que pena :(")){
 					 	console.log(t);
 					 	$(t).remove();
 					}
@@ -337,7 +394,7 @@
 					  });
 					
 
-					$('input:radio[name="lev_acomp"]').change(function(){						
+					$('input:radio[name="kids"]').change(function(){						
 						if($(this).val() == 'yes'){
 							$(".form_func").addClass("mr-50");
 							$('.bt-plusacomp').show();

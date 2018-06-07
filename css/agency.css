@@ -267,7 +267,7 @@ header.masthead .intro-text .intro-heading {
   }
 
   input[type=text] {
-    font-size: 1.5em !important;
+    font-size: 1.1em !important;
   }
 
   section {
@@ -280,6 +280,12 @@ header.masthead .intro-text .intro-heading {
 
   .img-footer{
     width:40%;
+  }
+
+  .height-bt{
+    height: 66px;
+    vertical-align: middle;
+    margin: 0 auto;
   }
 
 }
@@ -811,6 +817,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   width:100%;
 }
 
+.width-90{
+  width:95% !important;
+}
+
 .height-100{
   height:100%;
 }
@@ -819,12 +829,24 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   padding-bottom:0 !important;
 }
 
+.pl0{
+  padding-left:0 !important;
+}
+
+.pr0{
+  padding-right:0 !important;
+}
+
 .p0{
   padding: 0 !important;
 }
 
+.ptrl30{
+  padding: 30px 30px 0;
+}
+
 .p30{
-  padding: 30px !important;
+  padding: 30px;
 }
 
 .m0{
@@ -833,6 +855,14 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .mb10{
   margin-bottom: 10px !important;
+}
+
+.ml15{
+  margin-left: 15px !important;
+}
+
+.mr15{
+  margin-right: 15px !important;
 }
 
 .m15{
@@ -909,8 +939,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     -ms-appearance: none;
     appearance: none;
     background: #d2f779;
-    /* border: solid 2px rgba(255, 255, 255, 0.25); */
-    border-radius: 0.25rem;
     color: inherit;
     display: block;
     outline: 0;
@@ -928,13 +956,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 .button.special.color2:hover {
-  background-color: #84b93f !important;
+  background-color: #4ea003 !important;
   color: #fff!important;
 }
 
 .button.special.color2.not-acomp, .button.special.color2.not-acomp:hover {
-  background-color: #94d441 !important;
-  color: #709e32!important;
+  background-color: #78ca0f !important;
+  color: #8dde35!important;
   cursor: default;
 }
 
@@ -950,17 +978,17 @@ input[type=text]{
   -ms-appearance: none;
   appearance: none;
   background: #edf2f500;
-  border-bottom: 2px solid #254550 !important;
   color: inherit;
   display: block;
   outline: 0;
   text-decoration: none;
   width: 100%;
   border: 0;
-  font-size: 2em;
+  font-size: 1em;
   color: #254553;
-  font-family: 'Covered By Your Grace', cursive;
-  text-transform: uppercase;
+  font-family: 'Quicksand', cursive;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 ::placeholder{
@@ -974,7 +1002,6 @@ input[type=text]{
   appearance: none;
   background: #fff;
   border: solid 2px rgba(255, 255, 255, 0.25);
-  border-radius: 0.25rem;
   color: inherit;
   display: block;
   outline: 0;
@@ -995,7 +1022,6 @@ input[type="text"]:focus {
 .checkCustom {
   display: inline-block;
   position: relative;
-  padding-left: 25px;
   margin-bottom: 10px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1005,7 +1031,6 @@ input[type="text"]:focus {
   text-align: left;
   font-family: 'Quicksand', cursive;
   color: #183740;
-  margin-right: 10px;
   font-weight: 600;
 }
 
@@ -1023,8 +1048,13 @@ input[type="text"]:focus {
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #eee;
+  background-color: #fff;
   border-radius: 2px;
+}
+
+.checkCustom label.kids{
+  margin: 2px 25px 0;
+    margin-bottom: 0 !important;
 }
 
 .checkCustom:hover input ~ .checkmark {
@@ -1032,7 +1062,8 @@ input[type="text"]:focus {
 }
 
 .checkCustom input:checked ~ .checkmark {
-  background-color: #5b6063;
+  background-color: #1f4063;
+  margin-right: 20px;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
@@ -1069,11 +1100,11 @@ input[type="text"]:focus {
 
 
 .invite-left{  
-  background-color: #a1e24b;
+  background-color: #8dde35;
 }
 
 .box_acompanhante{
-  background: #ffffff;
+  background: #98c3d4;
   font-size: 12px;
   padding: 10px 20px;
   margin-top: 10px;
@@ -1081,9 +1112,10 @@ input[type="text"]:focus {
 
 .close_acomp{
   position: absolute;
-  right: 42px;
+  right: 45px;
   font-size: 16px;
-  color: #5b6063;
+  color: #1F4063;
+  z-index: 2;
 }
 
 .write-font{
